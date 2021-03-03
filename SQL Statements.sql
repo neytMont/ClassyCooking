@@ -1,6 +1,9 @@
 SELECT * FROM Users;
 SELECT * FROM Recipes;
 
+SELECT * FROM MainIngredient;
+SELECT * FROM AdditionalIngredient;
+
 -- Delete user account CC-42
 DELETE FROM Users WHERE UID=0;
 

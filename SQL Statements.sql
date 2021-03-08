@@ -12,8 +12,8 @@ UPDATE Users
 SET recipes="[]"
 WHERE UID=0;
 
---Delete a user recipe CC-14 (Nathaniel)
+--Delete a user recipe CC-34 (Nathaniel)
 DELETE From Recpies WHere recipename = '**USER will have to enter recipe name as a "verification"**';
 
---Calling the user information CC-3
+--Calling the user information CC-37
 SELECT * FROM Users WHERE uid = '**current user**'

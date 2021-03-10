@@ -1,4 +1,17 @@
 <body>
+<style>
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
 <div class="main-content">
 <h1 class="mb-0">Edit Classy Cook Account</h1>
 </div>
@@ -52,3 +65,12 @@
 <footer class="footer">
 <div class="row align-items-center justify-content-xl-between">&nbsp;</div>
 </footer>
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</body>

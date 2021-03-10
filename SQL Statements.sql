@@ -13,7 +13,10 @@ SET recipes="[]"
 WHERE UID=0;
 
 --Delete a user recipe CC-34 (Nathaniel)
-DELETE From Recpies WHere recipename = '**USER will have to enter recipe name as a "verification"**';
+DELETE From Recpies 
+  WHere recipename = '**USER will have to enter recipe name as a "verification"**' 
+  And recipeuserid = '**current user**';
 
 --Calling the user information CC-37
-SELECT * FROM Users WHERE uid = '**current user**'
+SELECT * FROM Users 
+  WHERE uid = '**current user**'

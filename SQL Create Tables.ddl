@@ -60,7 +60,8 @@ INSERT INTO Users (UID, fName, lName, age, email, passHash, recipes) VALUES
 INSERT INTO Recipes (recipeID, recipeName, totalTime, difficulty, calories) VALUES
 (1, 'Brie Cups', '17:00', 1, 136),
 (2, 'Spinach and Banana Power Smoothie', '17:00', 1, 136),
-(3, 'Eggplant Burgers', '17:00', 1, 136);
+(3, 'Eggplant Burgers', '17:00', 1, 136),
+(4, 'Baked BBQ Chicken Wings', '', 0, 173); --incomplete
 
 INSERT INTO Directions (recipeID, directionID, direction) VALUES
 (1, 1001, 'step 1: step 2: '),

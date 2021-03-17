@@ -31,3 +31,11 @@ def createUser(data):
     #return true or false based on if it worked??
     return True
     
+# UC9 Get all saved recipes
+def getAllRecipes():
+    sql = "SELECT * FROM Recipes"
+    #Run the sql
+    data = 0
+    #return what the db returns
+    return data
+

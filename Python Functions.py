@@ -39,3 +39,10 @@ def getAllRecipes():
     #return what the db returns
     return data
 
+# UC10 Get length of time for recipe
+def getTimeNeeded(recipeID):
+    sql = "SELECT totalTime FROM Recipes WHERE recipeID = " + recipeID
+    #Run the sql
+    time = 0
+    #return the time
+    return time

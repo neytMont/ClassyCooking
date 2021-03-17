@@ -20,3 +20,4 @@ DELETE From Recpies
 --Calling the user information CC-37
 SELECT * FROM Users 
   WHERE uid = '**current user**'
+

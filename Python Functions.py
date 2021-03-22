@@ -48,7 +48,7 @@ def deleteUser(UID):
   
 # UC9 Get all saved recipes
 def getAllRecipes():
-    sql = "SELECT * FROM Recipes"
+    sql = "SELECT * FROM " + RECIPES
     #Run the sql
     data = 0
     #return what the db returns
@@ -56,11 +56,39 @@ def getAllRecipes():
 
 # UC10 Get length of time for recipe
 def getTimeNeeded(recipeID):
-    sql = "SELECT totalTime FROM Recipes WHERE recipeID=" + recipeID
+    sql = "SELECT totalTime FROM " + RECIPES + "WHERE recipeID=" + recipeID
     #Run the sql
     time = 0
     #return the time
     return time
 
+# UC7 Get recipes based on inputs
+def getRecipeFromRID(recipeID):
+    sql = "SELECT * FROM " + RECIPES + "WHERE recipeID=" + recipeID
+    #Run the sql
+    data = ''
+    #return the recipes
+    return data
+
+def getRecipeDifficulty(recipeID):
+    sql = "SELECT difficulty FROM " + RECIPES + "WHERE recipeID=" + recipeID
+    #Run the sql
+    data = ''
+    #return the recipes
+    return data
+
+def getRecipeName(recipeID):
+    sql = "SELECT recipeName FROM " + RECIPES + "WHERE recipeID=" + recipeID
+    #Run the sql
+    data = ''
+    #return the recipes
+    return data
+
+def getRecipeCallories(recipeID):
+    sql = "SELECT calories FROM " + RECIPES + "WHERE recipeID=" + recipeID
+    #Run the sql
+    data = ''
+    #return the recipes
+    return data
 
     

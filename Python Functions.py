@@ -40,7 +40,11 @@ def getLastUidFromDB():
 
 # CC-42 delete user sccount
 def deleteUser(UID):
-    
+    sql = "DELETE FROM " + USERS + "WHERE UID=" + UID
+    #Run the sql
+    #Check db to make sure entry is gone
+    #return true or false based on if it worked??
+    return True
   
 # UC9 Get all saved recipes
 def getAllRecipes():
@@ -52,7 +56,7 @@ def getAllRecipes():
 
 # UC10 Get length of time for recipe
 def getTimeNeeded(recipeID):
-    sql = "SELECT totalTime FROM Recipes WHERE recipeID = " + recipeID
+    sql = "SELECT totalTime FROM Recipes WHERE recipeID=" + recipeID
     #Run the sql
     time = 0
     #return the time

@@ -30,7 +30,18 @@ def createUser(data):
     #Check to make sure entry is in db
     #return true or false based on if it worked??
     return True
+
+def getLastUidFromDB():
+    sql = "SELECT UID FROM " + USERS +"WHERE UID=(SELECT max(UID) FROM " + USERS + ")"
+    #Run the sql
+    uid = 0
+    #return what the db returns
+    return uid
+
+# CC-42 delete user sccount
+def deleteUser(UID):
     
+  
 # UC9 Get all saved recipes
 def getAllRecipes():
     sql = "SELECT * FROM Recipes"
@@ -46,3 +57,6 @@ def getTimeNeeded(recipeID):
     time = 0
     #return the time
     return time
+
+
+    

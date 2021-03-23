@@ -42,8 +42,8 @@ CREATE TABLE AdditionalIngredient (
   additName varchar(30) NOT NULL,
   additCategory varchar(30) NOT NULL,
   additType varchar(30) NOT NULL,
-  CONSTRAINT PK_MainIngredient PRIMARY KEY (recipeID, additName),
-  CONSTRAINT FK_MainIngredient FOREIGN KEY (recipeID) REFERENCES Recipes(recipeID)
+  CONSTRAINT PK_AdditionalIngredient PRIMARY KEY (recipeID, additName),
+  CONSTRAINT FK_AdditionalIngredient FOREIGN KEY (recipeID) REFERENCES Recipes(recipeID)
 );
 
 INSERT INTO Users (UID, fName, lName, age, email, passHash, recipes) VALUES
@@ -61,22 +61,27 @@ INSERT INTO Recipes (recipeID, recipeName, totalTime, difficulty, calories) VALU
 (1, 'Brie Cups', '17:00', 1, 136),
 (2, 'Spinach and Banana Power Smoothie', '17:00', 1, 136),
 (3, 'Eggplant Burgers', '17:00', 1, 136),
-(4, 'Baked BBQ Chicken Wings', '', 0, 173); --incomplete
+(4, 'Baked BBQ Chicken Wings', '17:00', 1, 173), --incomplete
+(5, 'Mango Royale','30:00', 1, 350),
+(6, 'Egg Toast', '15:00', 1, 110);
 
 INSERT INTO Directions (recipeID, directionID, direction) VALUES
 (1, 1001, 'step 1: step 2: '),
 (2, 1002, 'step 1: step 2: '),
-(3, 1003, 'step 1: step 2: ');
+(3, 1003, 'step 1: step 2: '),
+(4, 1004, 'step 1: step 2: '),
+(5, 1005, 'step 1: step 2: '),
+(6, 1006, 'step 1: step 2: ');
 
 INSERT INTO MainIngredient (recipeID, mainName, mainCategory, mainType) VALUES
-(3, 'Salt', 'Spices & Oils', 'Spice'),
-(3, 'Pepper', 'Spices & Oils', 'Spice'),
-(3, 'Olive Oil', 'Spices & Oils', 'Oil'),
-(3, 'Vegetable Oil', 'Spices & Oils', 'Oil'),
 (2, 'Spinach', 'Refrigerator', 'Vegetable'),
 (2, 'Banana', 'Countertop', 'Fruit'),
 (3, 'Eggplant', 'Refrigerator', 'Vegetable'),
 (1, 'Brie', 'Refrigerator', 'Dairy'),
+(5, 'Mango', 'Countertop', 'Fruit'),
+(6, 'Sandwich Bread', 'Pantry', 'Bread'),
+(6, 'Egg', 'Refrigerator', 'Dairy'),
+(5, 'Graham Crackers', 'Pantry', 'Snacks'),
 (3, 'Tomato', 'Refrigerator', 'Vegetable');
 
 INSERT INTO AdditionalIngredient (recipeID, additName, additCategory, additType) VALUES
@@ -85,4 +90,11 @@ INSERT INTO AdditionalIngredient (recipeID, additName, additCategory, additType)
 (1, 'Raspberry Preserves', 'Refrigerator', 'Fruit'),
 (3, 'Peppercorns', 'Spices & Oils', 'Spice'),
 (3, 'BBQ Sauce', 'Refrigerator', 'Table Condiment'),
+(5, 'Heavy Cream', 'Refrigerator', 'Dairy'),
+(5, 'Sweetened Condensed Milk', 'Pantry', 'Packaged Goods'),
+(6, 'Mayonnaise', 'Refrigerator', 'Table Condiment'),
+(3, 'Salt', 'Spices & Oils', 'Spice'),
+(3, 'Pepper', 'Spices & Oils', 'Spice'),
+(3, 'Olive Oil', 'Spices & Oils', 'Oil'),
+(3, 'Vegetable Oil', 'Spices & Oils', 'Oil'),
 (3, 'Ketchup', 'Refrigerator', 'Table Condiment');

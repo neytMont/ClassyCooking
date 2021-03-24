@@ -1,0 +1,50 @@
+<body>
+<style>
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+<div class="main-content">
+<h1 class="mb-0">Delete Classy Recipe</h1>
+</div>
+
+<h4 class="heading-small text-muted mb-4">Recipes</h4>
+<div class="pl-lg-4">
+<div class="form-group focused"><label>List of Recipe:</label></div>
+<table>
+       <tr>
+         <td>
+         <textarea class="form-control form-control-alternative" style="margin: 0px; width: 250px; height: 16px;" rows="4" placeholder="User's Recipe1"></textarea>
+           <input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+       </tr>
+       <tr>
+           <td>
+             <textarea class="form-control form-control-alternative" style="margin: 0px; width: 250px; height: 16px;" rows="4" placeholder="User's Recipe2"></textarea>
+             <input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+       </tr>
+    </table>
+  <div class="pl-lg-4">&nbsp;</div>
+   <input type="button" value="Submit" style="float: right;">
+<footer class="footer">
+<div class="row align-items-center justify-content-xl-between">&nbsp;</div>
+</footer>
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+function SomeDeleteRowFunction(o) {
+  var p=o.parentNode.parentNode;
+  p.parentNode.removeChild(p);
+}
+</script>

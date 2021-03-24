@@ -98,7 +98,7 @@ nav {
   width: calc((125px + 80px + 2px) * 5);
 }
 
-.ingredient {
+#ingredient {
     position:block;
     margin:25px;
     height:145px; /* image height + 20px for label */
@@ -107,7 +107,7 @@ nav {
     background:#fff;
 }
 
-.ingredient h1 {
+#ingredient h1 {
     position:relative;
     text-align:center;
     font-weight:600;
@@ -115,9 +115,37 @@ nav {
     color:#444;
 }
 
-.ingredient img {
+#ingredient img {
     position:relative;
     border-radius: 50%; /* to make circular icon - can work with 125 square icons */
+    border: 10px solid transparent;
     width:125px; /* image width */
     height:125px; /* image height */
+}
+
+#nextOption, .click {
+  font-family: 'Marcellus', serif;
+  font-weight: 500;
+  color: #24252a;
+  float: center;
+  text-align: left;
+  padding: 60px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-bottom: auto;
+}
+
+#nextOption {
+  display: none;
+}
+
+#addiDisplay {
+  font-family: 'Marcellus', serif;
+  font-weight: 500;
+  color: #24252a;
+  float: center;
+  text-align: left;
+  padding: 60px;
+  text-decoration: none;
+  font-size: 17px;
 }

@@ -5,7 +5,7 @@ from mysql.connector import errorcode
 config = {
     'user': 'root',
     'password': '******',
-    'host': '35.197.70.77',
+    'host': '11.11.11.11',
     'client_flags': [ClientFlag.SSL],
     'ssl_ca': 'ssl/server-ca.pem',
     'ssl_cert': 'ssl/client-cert.pem',

@@ -1,5 +1,4 @@
 <body>
-<body>
     <div class="topnav">
       <a class="title">Classy Cooking</a>
       <a class="usertab">User</a>
@@ -7,37 +6,33 @@
       <a class="recipetab">Search</a>
     </div>
 <body>
-  
-
 
   <div class="pl-lg-4">&nbsp;</div>
-  
-  
+
   <section>    
     <div>
       <h1 class="mb-0">Delete Classy Recipe</h1>
     </div>
-  
+
     <article>
-      
+
       <table>
-         <tr>
-           <td>
-           <textarea class="form-control form-control-alternative" style="margin: 0px; width: 250px; height: 16px;" rows="4" placeholder="User's Recipe1"></textarea>
-             <input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
-         </tr>
-         <tr>
-             <td>
-               <textarea class="form-control form-control-alternative" style="margin: 0px; width: 250px; height: 16px;" rows="4" placeholder="User's Recipe2"></textarea>
-               <input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
-         </tr>
+        <tr>
+          <td>
+            <textarea class="form-control form-control-alternative" style="margin: 0px; width: 250px; height: 16px;" rows="4" placeholder="User's Recipe1"></textarea>
+            <input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+        </tr>
+        <tr>
+          <td>
+            <textarea class="form-control form-control-alternative" style="margin: 0px; width: 250px; height: 16px;" rows="4" placeholder="User's Recipe2"></textarea>
+            <input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+        </tr>
       </table>
-      <input type="button" value="Submit" style="float: right;">
+      <button onclick="buttonFunction()" value="Submit" style="float: right;">Submit</button>
+      <p id="demo"></p>
     </article>
   </section>
-  
-   
-  
+
   
  <footer>
     <div class="row align-items-center justify-content-xl-between">&nbsp;</div>
@@ -52,6 +47,15 @@
     function SomeDeleteRowFunction(o) {
       var p=o.parentNode.parentNode;
       p.parentNode.removeChild(p);
+    }
+   function buttonFunction() {
+      var txt;
+      if (confirm("Press a button!")) {
+        txt = "You pressed OK!";
+      } else {
+        txt = "You pressed Cancel!";
+      }
+      document.getElementById("demo").innerHTML = txt;
     }
 </script>
   <style>
@@ -139,4 +143,3 @@
         color: white;
       }
 </style>
-

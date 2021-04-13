@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!-- Following 3 for Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      
+      body {
+        margin: 0;
+        font-family: 'Montserrat', sans-serrif;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color: #FFDE59;
+      }
+      .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 17px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .topnav a.recipetab {
+        background-color: #FF914D;
+        color: white;
+      }
+      .topnav a.usertab {
+        background-color: #FF5757;
+        color: white;
+      }
+      .topnav a:hover {
+        background-color: #FFDE59;
+        color: #FF914D;
+      }
+      .topnav a.title {
+        float: left;
+        color: #FF914D;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 22px;
+      }
+      #testDisplay, .click {
+        float: center;
+        color: black;
+        text-align: left;
+        padding-left: 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      #testDisplay {
+        display: none;
+      }
+      h1 {
+        float: left;
+        color: #FF914D;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .main {
+        width: 75%;
+        float: left;
+        padding: 15px;
+      }
+      </style>
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a class="title">Classy Cooking</a>
+      <a class="usertab">User</a>
+      <a class="recipetab" onclick="displayResults()">Recipes</a>
+      <a class="recipetab">Search</a>
+    </div>
+
+    <div>
+      <h1>Existing User Recipes</h1>
+    </div>
+    
+    <div class="main">
+        <ul>
+        <li>Brie Cups</li>
+        <li>Spinach and Banana Power Smoothie</li>
+        <li>Eggplant Burgers</li>
+      </ul>
+    </div>
+   
+  
+    
+    <script>
+      function displayResults() {
+        document.getElementById("testDisplay").style.display = "block";
+      }
+    </script>
+  </body>
+  
+</html>

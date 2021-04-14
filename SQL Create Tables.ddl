@@ -28,6 +28,15 @@ CREATE TABLE Directions(
   CONSTRAINT FK_Directions FOREIGN KEY (recipeID) REFERENCES Recipes(recipeID)
 );
 
+CREATE TABLE InterTechStep(                                                      -- Table format for Interactive Technique Steps; might change since this goes with Directions
+  recipeID int NOT NULL,
+  directionID int NOT NULL,
+  techStepID int NOT NULL,
+  techniqueStep blob,                                                            -- not sure why type is not highlighting but it is a valid sql variable type (alternatives include varbinary & binary, which are smaller)
+  CONSTRAINT PK_InterTechStep PRIMARY KEY (recipeID, techStepID),
+  CONSTRAINT FK_InterTechStep FOREIGN KEY (recipeID, directionID) REFERENCES Directions(recipeID, directionID)
+);
+
 CREATE TABLE MainIngredient (
   recipeID int NOT NULL,                                                         -- Table format for Multivalued Attribute for Recipe
   mainName varchar(30) NOT NULL,                                                 -- Name for Ingredient
@@ -58,6 +67,7 @@ INSERT INTO Users (UID, fName, lName, age, email, passHash, recipes) VALUES
 
 -- Edited version of Recipes Insert Below:
 INSERT INTO Recipes (recipeID, recipeName, totalTime, difficulty, calories) VALUES
+(11111, 'For All Ingredients', '00', 1, 0),                                      -- Note to self: NOT Show this recipe since this is for sake of showing all ingredients in database
 (1, 'Brie Cups', '17:00', 1, 136),
 (2, 'Spinach and Banana Power Smoothie', '17:00', 1, 136),
 (3, 'Eggplant Burgers', '17:00', 1, 136),
@@ -82,7 +92,42 @@ INSERT INTO MainIngredient (recipeID, mainName, mainCategory, mainType) VALUES
 (6, 'Sandwich Bread', 'Pantry', 'Bread'),
 (6, 'Egg', 'Refrigerator', 'Dairy'),
 (5, 'Graham Crackers', 'Pantry', 'Snacks'),
-(3, 'Tomato', 'Refrigerator', 'Vegetable');
+(3, 'Tomato', 'Refrigerator', 'Vegetable'),
+(11111, 'Spinach', 'Refrigerator', 'Vegetable'),
+(11111, 'Banana', 'Countertop', 'Fruit'),
+(11111, 'Eggplant', 'Refrigerator', 'Vegetable'),
+(11111, 'Brie', 'Refrigerator', 'Dairy'),
+(11111, 'Mango', 'Countertop', 'Fruit'),
+(11111, 'Sandwich Bread', 'Pantry', 'Bread'),
+(11111, 'Egg', 'Refrigerator', 'Dairy'),
+(11111, 'Graham Crackers', 'Pantry', 'Snacks'),
+(11111, 'Tomato', 'Refrigerator', 'Vegetable'),
+(11111, 'Chocolate', 'Pantry', 'Snacks'),
+(11111, 'Honey', 'Spices & Oils', 'Baking Goods'),
+(11111, 'White Rice', 'Pantry', 'Grains'),
+(11111, 'Brown Rice', 'Pantry', 'Grains'),
+(11111, 'Quinoa', 'Pantry', 'Grains'),
+(11111, 'Spaghetti Noodles', 'Pantry', 'Noodles'),
+(11111, 'Fettuccine Noodles', 'Pantry', 'Noodles'),
+(11111, 'Angel Hair Noodles', 'Pantry', 'Noodles'),
+(11111, 'Macaroni Noodles', 'Pantry', 'Noodles'),
+(11111, 'Tortillas', 'Pantry', 'Bread'),
+(11111, 'Chia Seeds', 'Pantry', 'Grains'),
+(11111, 'Peanut Butter', 'Pantry', 'Table Condiment'),
+(11111, 'Almond Butter', 'Pantry', 'Table Condiment'),
+(11111, 'Oats', 'Pantry', 'Grains'),
+(11111, 'Corn', 'Refrigerator', 'Vegetable'),
+(11111, 'Green Beans', 'Refrigerator', 'Vegetable'),
+(11111, 'Milk', 'Refrigerator', 'Dairy'),
+(11111, 'Yogurt', 'Refrigerator', 'Dairy'),
+(11111, 'Butter', 'Refrigerator', 'Dairy'),
+(11111, 'Apple', 'Countertop', 'Fruit'),
+(11111, 'Avocado', 'Refrigerator', 'Vegetable'),
+(11111, 'Banana', 'Countertop', 'Fruit'),
+(11111, 'Bell Pepper', 'Refrigerator', 'Vegetable'),
+(11111, 'Broccoli', 'Refrigerator', 'Vegetable'),
+(11111, 'Ground Beef', 'Refrigerator', 'Meat'),
+(11111, 'Chicken Breast', 'Refrigerator', 'Meat');                                   -- start here: (11111, 'Tomato', 'Refrigerator', 'Vegetable'),
 
 INSERT INTO AdditionalIngredient (recipeID, additName, additCategory, additType) VALUES
 (3, 'Hamburger Buns', 'Pantry', 'Bread'),
@@ -97,4 +142,17 @@ INSERT INTO AdditionalIngredient (recipeID, additName, additCategory, additType)
 (3, 'Pepper', 'Spices & Oils', 'Spice'),
 (3, 'Olive Oil', 'Spices & Oils', 'Oil'),
 (3, 'Vegetable Oil', 'Spices & Oils', 'Oil'),
-(3, 'Ketchup', 'Refrigerator', 'Table Condiment');
+(3, 'Ketchup', 'Refrigerator', 'Table Condiment'),
+(11111, 'Hamburger Buns', 'Pantry', 'Bread'),
+(11111, 'Tart Cups', 'Refrigerator', 'Dough'),
+(11111, 'Raspberry Preserves', 'Refrigerator', 'Fruit'),
+(11111, 'Peppercorns', 'Spices & Oils', 'Spice'),
+(11111, 'BBQ Sauce', 'Refrigerator', 'Table Condiment'),
+(11111, 'Heavy Cream', 'Refrigerator', 'Dairy'),
+(11111, 'Sweetened Condensed Milk', 'Pantry', 'Packaged Goods'),
+(11111, 'Mayonnaise', 'Refrigerator', 'Table Condiment'),
+(11111, 'Salt', 'Spices & Oils', 'Spice'),
+(11111, 'Pepper', 'Spices & Oils', 'Spice'),
+(11111, 'Olive Oil', 'Spices & Oils', 'Oil'),
+(11111, 'Vegetable Oil', 'Spices & Oils', 'Oil'),
+(11111, 'Ketchup', 'Refrigerator', 'Table Condiment');

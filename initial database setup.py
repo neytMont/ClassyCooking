@@ -31,7 +31,7 @@ def createDB():
     cursor.execute('CREATE DATABASE ccDB')  # create a new  database
     cursor.close()
     conn.close()  # close connection because we will be reconnecting to testdb
-#createDB()
+createDB()
 
 config['database'] = 'ccDB'  # add new database to config dict
 
@@ -68,6 +68,15 @@ TABLES['Directions'] = (
     "`direction` VARCHAR(200) NOT NULL,"
     "CONSTRAINT `PK_Directions` PRIMARY KEY (`recipeID`, `directionID`),"
     "CONSTRAINT `FK_Directions` FOREIGN KEY (`recipeID`) REFERENCES `Recipes`(`recipeID`) )")
+
+TABLES['InterTechStep'] = (
+    "CREATE TABLE `InterTechStep` ("
+    "`recipeID` INT NOT NULL,"
+    "`directionID` INT NOT NULL,"
+    "`techStepID` INT NOT NULL,"
+    "`techniqueStep` BLOB,"
+    "CONSTRAINT `PK_InterTechStep` PRIMARY KEY (`recipeID`, `techStepID`),"
+    "CONSTRAINT `FK_InterTechStep` FOREIGN KEY (`recipeID`, `directionID`) REFERENCES `Directions`(`recipeID`, `directionID`) )")
 
 TABLES['MainIngredient'] = (
     "CREATE TABLE `MainIngredient` ("
@@ -124,6 +133,9 @@ add_recipes = ("INSERT INTO Recipes "
 add_directions = ("INSERT INTO Directions "
                   "(recipeID, directionID, direction) "
                   "VALUES (%s, %s, %s)")
+add_interTechStep = ("INSERT INTO InterTechStep "
+                     "(recipeID, directionID, techStepID, techniqueStep) "
+                     "VALUES (%s, %s, %s, %s)")
 add_MainIngredient = ("INSERT INTO MainIngredient "
                       "(recipeID, mainName, mainCategory, mainType) "
                       "VALUES (%s, %s ,%s, %s)")
@@ -137,6 +149,10 @@ try:
     data = (1, "test2", "tester2", 22, "example2@e.com", "sgdfg23432rfgh5et4wefdr", "[]")
     cursor.execute(add_users, data)
 
+    #####
+    data = (11111, 'For All Ingredients', '00', 1, 0)
+    cursor.execute(add_recipes, data)
+    #####
     data = (1, 'Brie Cups', '17:00', 1, 136)
     cursor.execute(add_recipes, data)
     data = (2, 'Spinach and Banana Power Smoothie', '17:00', 1, 136)
@@ -165,8 +181,8 @@ try:
 
     data = (2, 'Spinach', 'Refrigerator', 'Vegetable')
     cursor.execute(add_MainIngredient, data)
-    data = (2, 'Banana', 'Countertop', 'Fruit')
-    cursor.execute(add_MainIngredient, data)
+    #data = (2, 'Banana', 'Countertop', 'Fruit')
+    #cursor.execute(add_MainIngredient, data)
     data = (3, 'Eggplant', 'Refrigerator', 'Vegetable')
     cursor.execute(add_MainIngredient, data)
     data = (1, 'Brie', 'Refrigerator', 'Dairy')
@@ -180,6 +196,77 @@ try:
     data = (5, 'Graham Crackers', 'Pantry', 'Snacks')
     cursor.execute(add_MainIngredient, data)
     data = (3, 'Tomato', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    ####
+    data = (11111, 'Spinach', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Banana', 'Countertop', 'Fruit')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Eggplant', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Brie', 'Refrigerator', 'Dairy')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Mango', 'Countertop', 'Fruit')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Sandwich Bread', 'Pantry', 'Bread')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Egg', 'Refrigerator', 'Dairy')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Graham Crackers', 'Pantry', 'Snacks')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Tomato', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Chocolate', 'Pantry', 'Snacks')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Honey', 'Spices & Oils', 'Baking Goods')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'White Rice', 'Pantry', 'Grains')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Brown Rice', 'Pantry', 'Grains')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Quinoa', 'Pantry', 'Grains')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Spaghetti Noodles', 'Pantry', 'Noodles')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Fettuccine Noodles', 'Pantry', 'Noodles')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Angel Hair Noodles', 'Pantry', 'Noodles')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Macaroni Noodles', 'Pantry', 'Noodles')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Tortillas', 'Pantry', 'Bread')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Chia Seeds', 'Pantry', 'Grains')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Peanut Butter', 'Pantry', 'Table Condiment')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Almond Butter', 'Pantry', 'Table Condiment')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Oats', 'Pantry', 'Grains')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Corn', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Green Beans', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Milk', 'Refrigerator', 'Dairy')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Yogurt', 'Refrigerator', 'Dairy')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Butter', 'Refrigerator', 'Dairy')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Apple', 'Countertop', 'Fruit')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Avocado', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    #data = (11111, 'Banana', 'Countertop', 'Fruit')
+    #cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Bell Pepper', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Broccoli', 'Refrigerator', 'Vegetable')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Ground Beef', 'Refrigerator', 'Meat')
+    cursor.execute(add_MainIngredient, data)
+    data = (11111, 'Chicken Breast', 'Refrigerator', 'Meat')
     cursor.execute(add_MainIngredient, data)
 
     data = (3, 'Hamburger Buns', 'Pantry', 'Bread')
@@ -208,6 +295,34 @@ try:
     cursor.execute(add_AdditIngredient, data)
     data = (3, 'Ketchup', 'Refrigerator', 'Table Condiment')
     cursor.execute(add_AdditIngredient, data)
+    #####
+    data = (11111, 'Hamburger Buns', 'Pantry', 'Bread')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Tart Cups', 'Refrigerator', 'Dough')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Raspberry Preserves', 'Refrigerator', 'Fruit')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Peppercorns', 'Spices & Oils', 'Spice')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'BBQ Sauce', 'Refrigerator', 'Table Condiment')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Heavy Cream', 'Refrigerator', 'Dairy')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Sweetened Condensed Milk', 'Pantry', 'Packaged Goods')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Mayonnaise', 'Refrigerator', 'Table Condiment')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Salt', 'Spices & Oils', 'Spice')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Pepper', 'Spices & Oils', 'Spice')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Olive Oil', 'Spices & Oils', 'Oil')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Vegetable Oil', 'Spices & Oils', 'Oil')
+    cursor.execute(add_AdditIngredient, data)
+    data = (11111, 'Ketchup', 'Refrigerator', 'Table Condiment')
+    cursor.execute(add_AdditIngredient, data)
+
 except mysql.connector.Error as err:
     print(err)
 
@@ -226,6 +341,11 @@ for a in cursor:
     print(a)
 
 query = ("SELECT * FROM Directions")
+cursor.execute(query)
+for a in cursor:
+    print(a)
+
+query = ("SELECT * FROM InterTechStep")
 cursor.execute(query)
 for a in cursor:
     print(a)

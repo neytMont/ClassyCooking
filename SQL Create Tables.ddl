@@ -73,7 +73,8 @@ INSERT INTO Recipes (recipeID, recipeName, totalTime, difficulty, calories) VALU
 (3, 'Eggplant Burgers', '17:00', 1, 136),
 (4, 'Baked BBQ Chicken Wings', '17:00', 1, 173), --incomplete
 (5, 'Mango Royale','30:00', 1, 350),
-(6, 'Egg Toast', '15:00', 1, 110);
+(6, 'Egg Toast', '15:00', 1, 110)
+(7, 'Fruit Salad', '20:00', 1, 200);
 
 INSERT INTO Directions (recipeID, directionID, direction) VALUES
 (1, 1001, 'step 1: step 2: '),

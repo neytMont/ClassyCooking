@@ -1,80 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Following 3 for Montserrat Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Montserrat', sans-serrif;
-      }
-      .topnav {
-        overflow: hidden;
-        background-color: #FFDE59;
-      }
-      .topnav a {
-        float: right;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 17px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-      .topnav a.recipetab {
-        background-color: #FF914D;
-        color: white;
-      }
-      .topnav a.usertab {
-        background-color: #FF5757;
-        color: white;
-      }
-      .topnav a:hover {
-        background-color: #FFDE59;
-        color: #FF914D;
-      }
-      .topnav a.title {
-        float: left;
-        color: #FF914D;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 22px;
-      }
-      #testDisplay, .click {
-        float: center;
-        color: black;
-        text-align: left;
-        padding-left: 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-      #testDisplay {
-        display: none;
-      }
-      </style>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>Navigation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header-top>
+          <div class="nLogo">
+            <a href="#">Classy Cooking</a>
+          </div>
+        </header-top>
 
-  <body>
-    <div class="topnav">
-      <a class="title">Classy Cooking</a>
-      <a class="usertab">User</a>
-      <a class="recipetab" onclick="displayResults()">Recipes</a>
-      <a class="recipetab">Search</a>
-    </div>
+        <header>
+            <a class="special" href="#">Recipe Search</a>
+            <nav>
+                <div class="nLinks">
+                    <li><a onclick="displayResults()" href="#">All Recipes</a></li>
+                    <li><a href="https://sauravc99.github.io/ClassyCooking/frontend/settings/">Settings</a></li>
+                    <li><a href="#">Ratings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </div>
+            </nav>
+        </header>
 
-    <div id="testDisplay">
-      <h2>All Classy Recipes</h2>
-      <ul>Brie Cups</ul>
-      <ul>Spinach and Banana Power Smoothie</ul>
-      <ul>Eggplant Burgers</ul>
-    </div>
+        <div id="testDisplay">
+          <h2>All Classy Recipes</h2>
+          <ul style="padding-left:30px">Brie Cups</ul>
+          <ul style="padding-left:30px">Spinach and Banana Power Smoothie</ul>
+          <ul style="padding-left:30px">Eggplant Burgers</ul>
+          <ul style="padding-left:30px">Mango Royale</ul>
+          <ul style="padding-left:30px">Egg Toast</ul>
+        </div>
 
-    <script>
-      function displayResults() {
-        document.getElementById("testDisplay").style.display = "block";
-      }
-    </script>
-  </body>
+        <script>
+          function displayResults() {
+            document.getElementById("testDisplay").style.display = "block";
+          }
+        </script>
+    </body>
 </html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Navigation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header-top>
+          <div class="nLogo">
+            <a href="#">Classy Cooking</a>
+          </div>
+        </header-top>
+
+        <header>
+            <a class="special" onclick="displayResults()" href="#">Recipe Search</a>
+            <nav>
+                <div class="nLinks">
+                    <li><a href="https://sauravc99.github.io/ClassyCooking/frontend/searchAllRecipes/">All Recipes</a></li>
+                    <li><a href="https://sauravc99.github.io/ClassyCooking/frontend/settings/">Settings</a></li>
+                    <li><a href="#">Ratings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </div>
+            </nav>
+        </header>
+
+        <div id="searchDisplay">
+          <div id="mainSearch">
+            <h1 style="font-size: 28px">Let's choose your Main Ingredients</h1>
+            <div id="ingredient">
+              <img src="temp icon.png"/>
+              <h1>Spinach</h1>
+            </div>
+
+            <div id="ingredient">
+              <img src="temp icon.png"/>
+              <h1>Banana</h1>
+            </div>
+
+            <div id="ingredient">
+              <img src="temp icon.png"/>
+              <h1>Eggplant</h1>
+            </div>
+
+            <div id="ingredient">
+              <img src="temp icon.png"/>
+              <h1>Brie</h1>
+            </div>
+
+            <div id="ingredient">
+              <img id="icon" onclick="clickedOn()" src="temp icon.png"/>
+              <h1>Mango</h1> <!-- For Demo Example -->
+            </div>
+
+            <div id="ingredient">
+              <img src="temp icon.png"/>
+              <h1>Sandwich Bread</h1>
+            </div>
+
+            <div id="ingredient">
+              <img src="temp icon.png"/>
+              <h1>Egg</h1>
+            </div>
+
+            <div id="ingredient">
+              <img src="temp icon.png"/>
+              <h1>Graham Crackers</h1>
+            </div>
+
+            <div id="ingredient">
+              <img src="temp icon.png"/>
+              <h1>Tomato</h1>
+            </div>
+          </div>
+        </div>
+
+        <div id="nextOption">
+          <p><a class="special" href="recipeResultsSkip.html">Skip to Recipes</a></p>
+          <br><p><a class="special" href="additIngredients.html">Add Additional Ingredients</a></p>
+        </div>
+
+        <script>
+          var content = document.getElementById('ingredient');
+          var icon = document.getElementById('icon');
+
+          function clickedOn() {
+            if(icon.style.border == "10px solid transparent"){
+              icon.style.border = "10px solid #ED7345";
+              document.getElementById("nextOption").style.display = "block";
+            }
+            else{
+              icon.style.border = "10px solid transparent";
+              document.getElementById("nextOption").style.display = "none";
+            }
+          }
+
+          function displayResults() {
+            document.getElementById("searchDisplay").style.display = "block";
+          }
+        </script>
+
+    </body>
+</html>

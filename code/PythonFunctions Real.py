@@ -46,7 +46,24 @@ def createUser(data):
     cursor.execute(add_user, data_user)
     conn.commit()
     return True
-
+  
+def createRecipe(data):
+     recipeName, totalTime, difficulty, calories = data
+     recipe_Id = getLastRecipeID() + 1
+     add_recipe = ("INSERT INTO Recipes "
+              "(recipeID, recipeName, totalTime, difficulty, calories) "
+              "VALUES (%s, %s ,%s, %s, %s)")
+     data_recipe = (recipe_Id, recipeName, totalTime, difficulty, calories)
+     cursor.execute(add_recipe, data_recipe)
+     conn.commit()
+     return True
+    
+def getLastRecipeID():
+    query = ("SELECT recipeID FROM Recipes"
+             "WHERE recipeID = (SELECT max(recipeID) FROM Recipes)")
+    cursor.execute(query)
+    return cursor.fetchall()[0][0]
+    
 def getLastUidFromDB():
     query = ("SELECT UID FROM Users "
              "WHERE UID=(SELECT max(UID) FROM Users)")

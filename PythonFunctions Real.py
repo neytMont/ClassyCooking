@@ -55,6 +55,23 @@ def getLastUidFromDB():
     # return what the db returns
     return cursor.fetchall()[0][0]
 
+def createRecipe(data):
+    recipeName, totalTime, difficulty, calories = data
+    recipe_Id = getLastRecipeID() + 1
+    add_recipe = ("INSERT INTO Recipes "
+                  "(recipeID, recipeName, totalTime, difficulty, calories) "
+                  "VALUES (%s, %s ,%s, %s, %s)")
+    data_recipe = (recipe_Id, recipeName, totalTime, difficulty, calories)
+    cursor.execute(add_recipe, data_recipe)
+    conn.commit()
+    return True
+
+def getLastRecipeID():
+    query = ("SELECT recipeID FROM Recipes"
+             "WHERE recipeID = (SELECT max(recipeID) FROM Recipes)")
+    cursor.execute(query)
+    return cursor.fetchall()[0][0]
+
 
 # CC-42 delete user account
 def deleteUser(UID):

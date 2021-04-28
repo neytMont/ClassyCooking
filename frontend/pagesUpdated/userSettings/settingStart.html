@@ -11,7 +11,7 @@
     <body>
         <header-top>
           <div class="nLogo">
-            <a href="#">Classy Cooking</a>
+            <h4>Classy Cooking</h4>
           </div>
         </header-top>
         <header>
@@ -68,10 +68,10 @@
         </content>
 
         <script>
-          var darkToggle = document.getElementByClassName("progress");
-
           function darkMode() {
-            document.getElementsByTagName("content").style.backgroundColor = "black";
+            document.getElementsByTagName("content")[0].style = "background-color: black; color: white";
+            document.getElementsByTagName("header-top")[0].style = "background-color: black";
+            document.getElementsByClassName("nLogo")[0].style = "color: white";
           }
         </script>
     </body>

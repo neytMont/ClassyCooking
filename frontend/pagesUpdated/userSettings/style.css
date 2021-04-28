@@ -35,9 +35,11 @@ nav {
 }
 
 .nLogo {
+  font-family: 'Marcellus', serif;
   list-style: none;
   display: flex;
   font-size: 20px;
+  color: black;
 }
 
 .nLinks {

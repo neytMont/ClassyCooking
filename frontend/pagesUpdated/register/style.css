@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #edf0f1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: #FAC643;
+}
+
+nav {
+  order: 2;
+}
+
+.nLogo a,
+.special,
+.nLinks a,
+.overlayContent a {
+  font-family: 'Marcellus', serif;
+  font-weight: 500;
+  color: #24252a;
+  text-decoration: none;
+}
+
+.nLogo {
+  list-style: none;
+  display: flex;
+  font-size: 20px;
+}
+
+content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  order: 3;
+  font-family: 'Marcellus', serif;
+  font-size: 12px;
+  padding: 75px;
+}
+
+registerArea {
+  display: flex;
+  order: 4;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+input {
+  display: block;
+  width:100%;
+  margin:20px 0;
+  padding:10px;
+}
+
+.boxArea {
+  columns: 200px 2;
+  column-gap: 50px;
+}
+
+.box {
+  border-radius:100px;
+  border: 1px solid #aaa;
+}
+
+buttons {
+  display: flex;
+  order: 5;
+  margin-bottom: auto;
+  padding: 35px;
+}
+
+.progress {
+  /* order: 5; */
+  font-size: 25;
+  padding: 9px 25px;
+  background-color: rgba(237, 115, 69, 1);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.progress:hover {
+  background-color: rgba(237, 115, 69, 0.5);
+}

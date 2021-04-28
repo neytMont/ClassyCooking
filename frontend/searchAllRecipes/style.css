@@ -90,3 +90,28 @@ nav {
 #testDisplay {
   display: none;
 }
+
+#recipe {
+    position:block;
+    margin:25px;
+    height:145px; /* image height + 20px for label */
+    width:125px; /* image width */
+    float:left;
+    background:#fff;
+}
+
+#recipe h1 {
+    position:relative;
+    text-align:center;
+    font-weight:600;
+    font-size:14px;
+    color:#444;
+}
+
+#recipe img {
+    position:relative;
+    border-radius: 50%; /* to make circular icon - can work with 125 square icons */
+    border: 10px solid transparent;
+    width:125px; /* image width */
+    height:125px; /* image height */
+}

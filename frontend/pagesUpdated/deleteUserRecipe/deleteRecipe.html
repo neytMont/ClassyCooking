@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Navigation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header-top>
+          <div class="nLogo">
+            <a href="#">Classy Cooking</a>
+          </div>
+        </header-top>
+        <header>
+          <a class="special" onclick="displayResults()" href="mainIngredients.html">Recipe Search</a>
+          <nav>
+              <div class="nLinks">
+                  <li><a href="#">All Recipes</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Ratings</a></li>
+                  <li><a href="#">Logout</a></li>
+              </div>
+          </nav>
+        </header>
+
+        <content>
+          <div>
+            <h1>Delete Original Recipes</h1>
+            <buttons>
+              <ul><a class="progress">Edit User Information</a></ul>
+            </buttons>
+            <buttons>
+              <ul><a class="progress">View Original Recipes</a></ul>
+            </buttons>
+            <buttons>
+              <ul><a class="progress">Delete Original Recipes</a></ul>
+            </buttons>
+            <buttons>
+              <ul><a class="progress">Dark Mode</a></ul>
+            </buttons>
+          </div>
+          <div>
+            <h2>Current User Recipes</h2>
+            <registerArea class="boxArea">
+              <input type="text" class="box" placeholder="User's Recipe 1" />
+                <buttons>
+                  <ul><a class="progress" onclick="SomeDeleteRowFunction(this)">Delete</a></ul>
+                </buttons>
+            </registerArea>
+            <registerArea class="boxArea">
+              <input type="text" class="box" placeholder="User's Recipe 2" />
+                <buttons>
+                  <ul><a class="progress" onclick="SomeDeleteRowFunction(this)">Delete</a></ul>
+                </buttons>
+            </registerArea>
+          </div>
+        </content>
+    </body>
+</html>

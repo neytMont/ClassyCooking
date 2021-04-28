@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Navigation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header-top>
+          <div class="nLogo">
+            <a href="#">Classy Cooking</a>
+          </div>
+        </header-top>
+        <header>
+          <a class="special" onclick="displayResults()" href="mainIngredients.html">Recipe Search</a>
+          <nav>
+              <div class="nLinks">
+                  <li><a href="#">All Recipes</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Ratings</a></li>
+                  <li><a href="#">Logout</a></li>
+              </div>
+          </nav>
+        </header>
+
+        <content>
+          <div>
+            <h1>New User Recipe</h1>
+            <buttons>
+              <ul><a class="progress">Edit User Information</a></ul>
+            </buttons>
+            <buttons>
+              <ul><a class="progress">View Original Recipes</a></ul>
+            </buttons>
+            <buttons>
+              <ul><a class="progress">Delete Original Recipes</a></ul>
+            </buttons>
+          </div>
+          <div>
+            <registerArea class="boxArea">
+                <input type="text" class="box" placeholder="Recipe Name" />
+                <buttons>
+                  <ul><a class="progress">Edit</a></ul>
+                </buttons>
+                <buttons>
+                  <ul><a class="progress">Delete</a></ul>
+                </buttons>
+            </registerArea>
+            <registerArea class="boxArea">
+              <h2>Total Time</h2>
+              <input type="text" class="box" placeholder="hh:mm:ss" />
+            </registerArea>
+            <registerArea class="boxArea">
+              <h2>Difficulty</h2>
+              <buttons>
+                <ul><a class="progress">Easy</a></ul>
+              </buttons>
+              <buttons>
+                <ul><a class="progress">Medium</a></ul>
+              </buttons>
+              <buttons>
+                <ul><a class="progress">Hard</a></ul>
+              </buttons>
+            </registerArea>
+            <registerArea class="boxArea">
+              <h2>Ingredients</h2>
+              <buttons>
+                <ul><a class="progress">+</a></ul>
+              </buttons>
+            </registerArea>
+            <h2>Directions</h2>
+            <registerArea class="boxArea">
+              <h2>1.</h2>
+              <textarea placeholder="Type Recipe Instruction Here."></textarea>
+              <buttons>
+                <ul><a class="progress">Edit</a></ul>
+              </buttons>
+              <buttons>
+                <ul><a class="progress">+</a></ul>
+              </buttons>
+            </registerArea>
+          </div>
+        </content>
+    </body>
+  </html>

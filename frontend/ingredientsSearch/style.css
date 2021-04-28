@@ -76,6 +76,19 @@ nav {
   background-color: rgba(237, 115, 69, 0.5);
 }
 
+select {
+  width: 75%;
+  padding:10px;
+  border-radius:10px;
+}
+
+.boxArea {
+  display: flex;
+  columns: 50px 4;
+  column-gap: 25px;
+  flex-direction: row;
+}
+
 #searchDisplay, .click {
   font-family: 'Marcellus', serif;
   font-weight: 500;

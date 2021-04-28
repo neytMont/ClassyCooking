@@ -1,53 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
+    <head>
+        <meta charset="utf-8">
+        <title>Navigation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header-top>
+          <div class="nLogo">
+            <a href="#">Classy Cooking</a>
+          </div>
+        </header-top>
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+        <header>
+            <a class="special" href="#">Recipe Search</a>
+            <nav>
+                <div class="nLinks">
+                    <li><a href="#">All Recipes</a></li>
+                    <li><a onclick="displayResults()" href="#">Settings</a></li>
+                    <li><a href="#">Ratings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </div>
+            </nav>
+        </header>
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+        <div id="testDisplay">
+          <h2>Account Settings</h2>
+          <button><ul><a href="#">Update Account</a></ul></button>
+          <button><ul><a href="#">Delete Account</a></ul></button>
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+        </div>
 
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-</style>
-</head>
-<body>
-
-<div class="dropdown">
-  <button class="dropbtn">Account Settings</button>
-  <div class="dropdown-content">
-    <a href="#">Delete Account</a>
-    <a href="#">Edit Account</a>
-  </div>
-</div>
-
-</body>
+        <script>
+          function displayResults() {
+            document.getElementById("testDisplay").style.display = "block";
+          }
+        </script>
+    </body>
 </html>

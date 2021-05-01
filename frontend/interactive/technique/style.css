@@ -104,7 +104,8 @@ buttons {
   display: flex;
   order: 5;
   margin-bottom: auto;
-  padding: 35px;
+  padding: 15px;
+  column-gap: 100px;
 }
 
 .progress {
@@ -121,4 +122,9 @@ buttons {
 
 .progress:hover {
   background-color: rgba(237, 115, 69, 0.5);
+}
+
+button {
+  font-family: 'Marcellus', serif;
+  font-size: 16px;
 }

@@ -27,110 +27,119 @@
             </nav>
         </header>
 
-        <div id="searchDisplay">
-          <div class="boxArea">
-            <select name="timeOpt">
-              <option value="label">Time</option>
-              <option value="1">0-20 Minutes</option>
-              <option value="2">20-45 Minutes</option>
-              <option value="3">45+ Minutes</option>
-            </select>
-            <select name="budgetOpt">
-              <option value="label">Budget</option>
-              <option value="1">$</option>
-              <option value="2">$$</option>
-              <option value="3">$$$</option>
-            </select>
-            <select name="levelOpt">
-              <option value="label">Level</option>
-              <option value="1">Beginner</option>
-              <option value="2">Intermediate</option>
-              <option value="3">Expert</option>
-            </select>
+        <content>
+          <div id="searchDisplay">
+            <h2>Recipe Search</h2><br><br>
+            <h3>Additional Search Constraints</h3><br><br>
+            <div class="boxArea">
+              <ul>Time</ul>
+              <select name="timeOpt">
+                <option value="none">None</option>
+                <option value="1">Short (0-20 Minutes)</option>
+                <option value="2">Medium (20-45 Minutes)</option>
+                <option value="3">Long (45+ Minutes)</option>
+              </select>
+              <ul>Budget</ul>
+              <select name="budgetOpt">
+                <option value="none">None</option>
+                <option value="1">Budget ($)</option>
+                <option value="2">Affordable ($$)</option>
+                <option value="3">Expensive ($$$)</option>
+              </select>
+              <ul>Difficulty</ul>
+              <select name="levelOpt">
+                <option value="none">None</option>
+                <option value="1">Easy</option>
+                <option value="2">Medium</option>
+                <option value="3">Hard</option>
+              </select>
+            </div><br>
+            <div id="mainSearch">
+              <h3>First, choose your Main Ingredients</h3>
+              <div id="ingredient">
+                <img src="images/ingredients/spinach.jpg"/>
+                <h1>Spinach</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/banana.jpg"/>
+                <h1>Banana</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/eggplant.jpg"/>
+                <h1>Eggplant</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/brie.jpg"/>
+                <h1>Brie</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/mango.jpeg"/>
+                <h1>Mango</h1> <!-- For Demo Example -->
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/sandwhich bread.jpg"/>
+                <h1>Sandwich Bread</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/egg.jpg"/>
+                <h1>Egg</h1>
+              </div>
+
+              <div id="ingredient">
+                <img id="icon" onclick="clickedOn()" src="images/ingredients/graham crackers.jpg"/>
+                <h1>Graham Crackers</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/tomato.jpg"/>
+                <h1>Tomato</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/chicken wings.jpg"/>
+                <h1>Chicken Wings</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/white rice.jpeg"/>
+                <h1>White Rice</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/brown rice.jpg"/>
+                <h1>Brown Rice</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/ground beef.jpg"/>
+                <h1>Ground Beef</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/oats.jpg"/>
+                <h1>Oats</h1>
+              </div>
+
+              <div id="ingredient">
+                <img src="images/ingredients/yogurt.jpg"/>
+                <h1>Yogurt</h1>
+              </div>
+            </div>
           </div>
-          <div id="mainSearch">
-            <h1 style="font-size: 28px">Let's choose your Main Ingredients</h1>
-            <div id="ingredient">
-              <img src="images/ingredients/spinach.jpg"/>
-              <h1>Spinach</h1>
-            </div>
 
-            <div id="ingredient">
-              <img src="images/ingredients/banana.jpg"/>
-              <h1>Banana</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/eggplant.jpg"/>
-              <h1>Eggplant</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/brie.jpg"/>
-              <h1>Brie</h1>
-            </div>
-
-            <div id="ingredient">
-              <img id="icon" onclick="clickedOn()" src="images/ingredients/mango.jpeg"/>
-              <h1>Mango</h1> <!-- For Demo Example -->
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/sandwhich bread.jpg"/>
-              <h1>Sandwich Bread</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/egg.jpg"/>
-              <h1>Egg</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/graham crackers.jpg"/>
-              <h1>Graham Crackers</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/tomato.jpg"/>
-              <h1>Tomato</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/chicken wings.jpg"/>
-              <h1>Chicken Wings</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/white rice.jpeg"/>
-              <h1>White Rice</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/brown rice.jpg"/>
-              <h1>Brown Rice</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/ground beef.jpg"/>
-              <h1>Ground Beef</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/oats.jpg"/>
-              <h1>Oats</h1>
-            </div>
-
-            <div id="ingredient">
-              <img src="images/ingredients/yogurt.jpg"/>
-              <h1>Yogurt</h1>
-            </div>
+          <div id="nextOption">
+            <buttons>
+              <button class="choices" href="recipeResultsSkip.html">Skip to Recipes</button>
+              <button class="choices" href="additIngredients.html">Add Additional Ingredients</button>
+            </buttons>
           </div>
-        </div>
-
-        <div id="nextOption">
-          <p><a class="special" href="recipeResultsSkip.html">Skip to Recipes</a></p>
-          <br><p><a class="special" href="additIngredients.html">Add Additional Ingredients</a></p>
-        </div>
+        </content>
 
         <script>
           var content = document.getElementById('ingredient');

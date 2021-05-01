@@ -28,61 +28,84 @@
 
         <content>
           <div>
-            <h1>New User Recipe</h1>
+            <h1>Settings Menu</h1><br>
             <buttons>
-              <ul><a class="progress">Edit User Information</a></ul>
+              <ul><a class="options">View User Profile</a></ul>
             </buttons>
             <buttons>
-              <ul><a class="progress">View Original Recipes</a></ul>
+              <ul><a class="options">Edit User Information</a></ul>
             </buttons>
             <buttons>
-              <ul><a class="progress">Delete Original Recipes</a></ul>
+              <ul><a class="current">Create Original Recipe</a></ul>
+            </buttons>
+            <buttons>
+              <ul><a class="options">View Original Recipes</a></ul>
+            </buttons>
+            <buttons>
+              <ul><a class="accented" onclick="darkMode()">Dark Mode</a></ul>
             </buttons>
           </div>
           <div>
+            <h2>Create Original User Recipe</h2><br>
             <registerArea class="boxArea">
-                <input type="text" class="box" placeholder="Recipe Name" />
-                <buttons>
-                  <ul><a class="progress">Edit</a></ul>
-                </buttons>
-                <buttons>
-                  <ul><a class="progress">Delete</a></ul>
-                </buttons>
-            </registerArea>
+              <ul>Recipe Name</ul>
+              <input type="text" class="box" placeholder="Recipe Name" />
+              <ul>Calories</ul>
+              <input type="text" class="box" placeholder="Total Calories" />
+            </registerArea><br><br>
             <registerArea class="boxArea">
-              <h2>Total Time</h2>
-              <input type="text" class="box" placeholder="hh:mm:ss" />
-            </registerArea>
+              <ul>Total Time</ul>
+              <select name="hours">
+                <option value="label">Hours</option>
+                <option value="label">1</option>
+                <option value="label">2</option>
+                <option value="label">3</option>
+              </select>
+              <select name="minutes">
+                <option value="label">Minutes</option>
+                <option value="label">1</option>
+                <option value="label">2</option>
+                <option value="label">3</option>
+              </select>
+              <select name="seconds">
+                <option value="label">Seconds</option>
+                <option value="label">1</option>
+                <option value="label">2</option>
+                <option value="label">3</option>
+              </select>
+            </registerArea><br><br>
             <registerArea class="boxArea">
-              <h2>Difficulty</h2>
+              <ul>Difficulty</ul>
               <buttons>
-                <ul><a class="progress">Easy</a></ul>
+                <ul><a class="choices">Easy</a></ul>
               </buttons>
               <buttons>
-                <ul><a class="progress">Medium</a></ul>
+                <ul><a class="choices">Medium</a></ul>
               </buttons>
               <buttons>
-                <ul><a class="progress">Hard</a></ul>
+                <ul><a class="choices">Hard</a></ul>
               </buttons>
-            </registerArea>
+            </registerArea><br><br>
             <registerArea class="boxArea">
-              <h2>Ingredients</h2>
-              <buttons>
-                <ul><a class="progress">+</a></ul>
-              </buttons>
-            </registerArea>
-            <h2>Directions</h2>
+              <ul>Ingredients</ul><br>
+              <ul>Name</ul>
+              <input type="text" class="box" placeholder="Ingredient Name" />
+              <ul>Measurement</ul>
+              <input type="text" class="box" placeholder="Measurement" />
+              <ul><a class="choices">+</a></ul>
+            </registerArea><br><br>
+            <h2 style="font-weight: normal;">Directions</h2>
             <registerArea class="boxArea">
-              <h2>1.</h2>
+              <ul>1.</ul>
               <textarea placeholder="Type Recipe Instruction Here."></textarea>
               <buttons>
-                <ul><a class="progress">Edit</a></ul>
-              </buttons>
-              <buttons>
-                <ul><a class="progress">+</a></ul>
+                <ul><a class="choices">+</a></ul>
               </buttons>
             </registerArea>
+            <buttons>
+              <ul><a class="accented">Complete Recipe</a></ul>
+            </buttons>
           </div>
         </content>
     </body>
-  </html>
+</html>

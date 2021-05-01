@@ -117,6 +117,7 @@ input {
   flex-direction: row;
   columns: 50px 4;
   column-gap: 25px;
+  justify-content: space-around;
   /* grid-template-rows: repeat(2, 20px);
   gap: 20px;
   grid-auto-flow: column;
@@ -222,4 +223,9 @@ textarea {
   box-shadow:4px 4px 10px rgba(0,0,0,0.06);
   height:150px;
   font-family: 'Marcellus', serif;
+}
+
+button {
+  font-family: 'Marcellus', serif;
+  font-size: 16px;
 }

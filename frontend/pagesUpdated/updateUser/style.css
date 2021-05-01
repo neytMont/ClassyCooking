@@ -82,7 +82,7 @@ content {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   order: 3;
   font-family: 'Marcellus', serif;
   font-size: 12px;
@@ -102,24 +102,31 @@ registerArea {
   margin-top: auto;
   margin-left: auto;
   margin-right: auto;
-  padding: 5px;
+  padding: 10px;
+  font-family: 'Marcellus', serif;
+  font-size: 16px;
 }
 
 input {
   display: block;
   width:100%;
-  margin:20px 0;
-  padding:10px;
+  padding:17px;
 }
 
 .boxArea {
-  columns: 200px 2;
-  column-gap: 50px;
+  display: grid;
+  grid-template-rows: repeat(2, 20px);
+  gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px;
 }
 
 .box {
-  border-radius:100px;
-  border: 1px solid #aaa;
+  border-radius:50px;
+  border: solid 2px rgba(237, 115, 69, 1);
+  font-family: 'Marcellus', serif;
+  font-size: 14px;
+  /* padding: 9px 25px; */
 }
 
 buttons {
@@ -129,9 +136,28 @@ buttons {
   padding: 25px;
 }
 
-.progress {
+.options {
   /* order: 5; */
   font-size: 25;
+  font-weight: bold;
+  padding: 9px 25px;
+  background-color: white;
+  border: solid 2px rgba(237, 115, 69, 1);
+  color: rgba(237, 115, 69, 1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.options:hover {
+  background-color: rgba(237, 115, 69, 1);
+  color: white;
+}
+
+.current {
+  /* order: 5; */
+  font-size: 25;
+  font-weight: bold;
   padding: 9px 25px;
   background-color: rgba(237, 115, 69, 1);
   border: none;
@@ -141,6 +167,23 @@ buttons {
   transition: all 0.3s ease 0s;
 }
 
-.progress:hover {
+.current:hover {
   background-color: rgba(237, 115, 69, 0.5);
+}
+
+.accented {
+  /* order: 5; */
+  font-size: 25;
+  font-weight: bold;
+  padding: 9px 25px;
+  background-color: rgba(237, 69, 107, 1);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.accented:hover {
+  background-color: rgba(237, 69, 107, 0.5);
 }

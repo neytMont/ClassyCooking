@@ -35,9 +35,11 @@ nav {
 }
 
 .nLogo {
+  font-family: 'Marcellus', serif;
   list-style: none;
   display: flex;
   font-size: 20px;
+  color: black;
 }
 
 .nLinks {
@@ -108,19 +110,15 @@ registerArea {
 input {
   display: block;
   width:100%;
-  /* margin:20px 0; */
-  padding:7px;
+  padding:17px;
 }
 
 .boxArea {
-  display: flex;
-  flex-direction: row;
-  columns: 50px 4;
-  column-gap: 25px;
-  /* grid-template-rows: repeat(2, 20px);
+  display: grid;
+  grid-template-rows: repeat(2, 20px);
   gap: 20px;
   grid-auto-flow: column;
-  grid-auto-columns: 300px; */
+  grid-auto-columns: 300px;
 }
 
 .box {
@@ -128,6 +126,7 @@ input {
   border: solid 2px rgba(237, 115, 69, 1);
   font-family: 'Marcellus', serif;
   font-size: 14px;
+  /* padding: 9px 25px; */
 }
 
 buttons {
@@ -189,37 +188,7 @@ buttons {
   background-color: rgba(237, 69, 107, 0.5);
 }
 
-.choices {
-  /* order: 5; */
-  font-size: 25;
-  font-weight: bold;
-  padding: 9px 25px;
-  background-color: rgba(237, 115, 69, 1);
-  border: none;
-  color: white;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.choices:hover {
-  background-color: rgba(237, 115, 69, 0.5);
-}
-
-select {
-  width: 100%;
-  padding:7px;
-  border-radius:50px;
-  border: solid 2px rgba(237, 115, 69, 1);
-}
-
-textarea {
-  width:80%;
-  resize: vertical;
-  padding:15px;
-  border-radius:15px;
-  border:0;
-  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
-  height:150px;
+button {
   font-family: 'Marcellus', serif;
+  font-size: 16px;
 }

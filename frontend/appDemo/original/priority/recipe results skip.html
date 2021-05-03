@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Recipe Results with Main Ingredients Only</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/for search all.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header-top>
+          <div class="nLogo">
+            <h4 onclick="darkMode()">Classy Cooking</h4>
+          </div>
+        </header-top>
+        <!-- This is the area above the yellow line with options -->
+
+        <header>
+            <a class="special" href="main ingredients search.html">Recipe Search</a>
+            <nav>
+                <div class="nLinks">
+                    <li><a href="search all recipes.html">All Recipes</a></li>
+                    <li><a href="dark mode.html">Settings</a></li>
+                    <li><a href="#">Ratings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </div>
+            </nav>
+        </header>
+        <!-- This is the yellow line with options on top of the page -->
+
+        <content> <!-- General Area for under navigation top bar -->
+          <div> <!-- Section to place Page Label -->
+            <h1>Recipe Results</h1>
+          </div>
+
+          <boxArea> <!-- Area to list all recipe results -->
+            <div id="allSearch"> <!-- Specific area to list recipes -->
+              <div class="recipe"> <!-- Recipes are classes of their own -->
+                <img src="images/brie cups.jpg"/> <!-- consisting of img & h1 -->
+                <h1>Brie Cups</h1>
+              </div>
+
+              <div class="recipe">
+                <img src="images/spinach banana power smoothie.jpg"/>
+                <h1>Spinach and Banana Power Smoothie</h1>
+              </div>
+
+              <div class="recipe">
+                <img src="images/eggplant burger.jpg"/>
+                <h1>Eggplant Burgers</h1>
+              </div>
+
+              <div class="recipe">
+                <img src="images/baked bbq chicken wings.jpg"/>
+                <h1>Baked BBQ Chicken Wings</h1>
+              </div>
+
+              <div class="recipe">
+                <img src="images/mango royale.jpg"/>
+                <h1>Mango Royale</h1>
+              </div>
+
+              <div class="recipe">
+                <img id="icon" onclick="clickedOn()" src="images/egg toast.jpg"/>
+                <h1>Egg Toast</h1>
+              </div>
+              <!-- include id icon & clickedOn() function for visual selection effect -->
+            </div> <!-- End of specific area -->
+          </boxArea> <!-- End of recipe results area -->
+
+          <div id="nextOption"> <!-- Section for button to progress to follow recipe -->
+            <buttons>
+              <button class="choices" href="recipeResultsAdd.html">Start Cooking</button>
+            </buttons>
+          </div> <!-- End of button section -->
+        </content> <!-- End of General Area -->
+
+        <!-- JS Functions -->
+        <script>
+          var icon = document.getElementById('icon');
+
+          // function to visually select recipe
+          function clickedOn() {
+            if(icon.style.border == "10px solid transparent"){
+              icon.style.border = "10px solid #ED7345";
+              document.getElementById("nextOption").style.display = "block";
+            }
+            else{
+              icon.style.border = "10px solid transparent";
+              document.getElementById("nextOption").style.display = "none";
+            }
+          }
+
+          // function to set dark mode
+          function darkMode() {
+            document.getElementsByTagName("content")[0].style = "background-color: black; color: white";
+            document.getElementsByTagName("header-top")[0].style = "background-color: black";
+            document.getElementsByClassName("nLogo")[0].style = "color: white";
+          }
+        </script>
+    </body>
+</html>

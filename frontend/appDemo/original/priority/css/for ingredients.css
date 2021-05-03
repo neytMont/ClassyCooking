@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: #FAC643;
+}
+
+nav {
+  order: 2;
+}
+
+.nLogo a,
+.special,
+.nLinks a,
+.overlayContent a {
+  font-family: 'Marcellus', serif;
+  font-weight: 500;
+  color: #24252a;
+  text-decoration: none;
+}
+
+.nLogo {
+  font-family: 'Marcellus', serif;
+  list-style: none;
+  display: flex;
+  font-size: 20px;
+  color: black;
+}
+
+.nLinks {
+  list-style: none;
+  display: flex;
+  font-size: 16px;
+}
+
+.nLinks li {
+  padding: 0px 20px;
+}
+
+.nLinks li:nth-child(1) {
+  padding: 0 20px 0 0;
+}
+
+.nLinks li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nLinks li a:hover {
+  color: #ED456B;
+}
+
+.special {
+  order: 1;
+  padding: 9px 25px;
+  background-color: rgba(237, 115, 69, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.special:hover {
+  background-color: rgba(237, 115, 69, 0.5);
+}
+
+select {
+  width: 75%;
+  padding:10px;
+  border-radius:10px;
+}
+/* !!  */
+
+.boxArea {
+  display: flex;
+  columns: 50px 4;
+  column-gap: 25px;
+  flex-direction: row;
+}
+
+#searchDisplay {
+  font-family: 'Marcellus', serif;
+  font-weight: 500;
+  color: black;
+  float: center;
+  text-align: left;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#mainSearch {
+  font-family: 'Marcellus', serif;
+  position: relative;
+  margin: 50px auto 100px auto;
+  width: calc((125px + 80px + 2px) * 5);
+  color: black;
+}
+
+.ingredient {
+    position:block;
+    margin:25px;
+    height:145px; /* image height + 20px for label */
+    width:125px; /* image width */
+    float:left;
+    background-color: white;
+}
+
+.ingredient h1 {
+    position:relative;
+    text-align:center;
+    font-weight:600;
+    font-size:14px;
+    color:#444;
+}
+
+.ingredient img {
+    position:relative;
+    border-radius: 50%; /* to make circular icon - can work with 125 square icons */
+    border: 10px solid transparent;
+    width:125px; /* image width */
+    height:125px; /* image height */
+}
+
+#nextOption, .click {
+  font-family: 'Marcellus', serif;
+  font-weight: 500;
+  color: #24252a;
+  float: center;
+  text-align: left;
+  padding-left: 220px;
+  padding-top: 20px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-bottom: auto;
+}
+
+#nextOption {
+  display: none;
+}
+
+#addiDisplay {
+  font-family: 'Marcellus', serif;
+  font-weight: 500;
+  color: black;
+  float: center;
+  text-align: left;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: stretch;
+  order: 3;
+  font-family: 'Marcellus', serif;
+  font-size: 12px;
+  padding: 75px;
+}
+
+buttons {
+  display: flex;
+  order: 4;
+  margin-bottom: auto;
+  padding: 25px;
+  column-gap: 30px;
+  justify-content: center;
+}
+
+button {
+  font-family: 'Marcellus', serif;
+  font-size: 16px;
+}
+
+.choices {
+  font-size: 25;
+  font-weight: bold;
+  padding: 9px 25px;
+  background-color: rgba(237, 115, 69, 1);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.choices:hover {
+  background-color: rgba(237, 115, 69, 0.5);
+}

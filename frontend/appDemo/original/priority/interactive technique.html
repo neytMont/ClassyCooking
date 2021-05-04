@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- here -->
+    <head>
+        <meta charset="utf-8">
+        <title>Interactive Technique Step</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/for technique.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header-top>
+          <div class="nLogo">
+            <h4 onclick="darkMode()">Classy Cooking</h4>
+          </div>
+        </header-top>
+        <!-- This is the area above the yellow line with options -->
+
+        <header>
+            <a class="special" href="main ingredients search.html">Recipe Search</a>
+            <nav>
+                <div class="nLinks">
+                    <li><a href="search all recipes.html">All Recipes</a></li>
+                    <li><a href="dark mode.html">Settings</a></li>
+                    <li><a href="#">Ratings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </div>
+            </nav>
+        </header>
+        <!-- This is the yellow line with options on top of the page -->
+
+        <content> <!-- General Area for under navigation top bar -->
+          <h1>Interactive Technique Step</h1><br> <!-- Interactive Label -->
+          <h2>Rising Dough</h2> <!-- Technique Label -->
+          <div> <!-- Section to format gif file image -->
+            <gifContent>
+                <center><img src="images/ToastEg.gif"/></center> <!-- centered gif file -->
+            </gifContent>
+          </div> <!-- End of gif file image format -->
+          <div> <!-- Section to format previous & next buttons -->
+            <buttons>
+              <button class="progress">Previous Step</button>
+              <button class="progress">Next Step</button>
+            </buttons>
+          </div> <!-- End of button formats -->
+        </content> <!-- End of General Area -->
+
+        <!-- JS Functions -->
+        <script>
+          // function to visually set dark mode
+          function darkMode() {
+            document.getElementsByTagName("content")[0].style = "background-color: black; color: white";
+            document.getElementsByTagName("header-top")[0].style = "background-color: black";
+            document.getElementsByClassName("nLogo")[0].style = "color: white";
+          }
+        </script>
+    </body>
+</html>
